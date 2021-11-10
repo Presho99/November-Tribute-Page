@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d33a03;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  /* max-height: 100vh;
+  overflow: hidden; */
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 1200px;
+  height: 80vh;
+  background-color: rgb(15, 12, 12);
+  margin: 60px auto;
+  display: flex;
+}
+
+header {
+  background-color: #101010;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
+
+.nav li {
+  display: inline-block;
+  padding: 0px 30px;
+}
+
+.nav li a {
+  color: white;
+  transition: all 0.3s ease 0s;
+}
+
+.nav li a:hover {
+  color: #d33a03;
+}
+
+.bars {
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+.bars .fas.fa-bars {
+  color: white;
+  font-size: 20px;
+}
+
+.content-container {
+  position: absolute;
+
+  width: 100%;
+  max-height: 70vh;
+  display: flex;
+  top: 80px;
+}
+
+.content-container-left,
+.content-container-right {
+  position: absolute;
+  width: 50%;
+}
+
+.content-container-left {
+  left: 0px;
+}
+
+.content-container-left img {
+  width: 600px;
+  height: 412px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.content-container-right {
+  right: 0px;
+
+  padding: 40px;
+  color: #eee;
+  align-items: center;
+}
+
+.content-container-right h1 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.content-container-right p a {
+  color: #d33a03;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.content-container-right p a:hover {
+  text-decoration: none;
+  color: #eee;
+}
+
+@media (max-width: 620px) {
+  .nav li {
+    padding: 0 20px;
+  }
+
+  .content-container-right {
+    top: 40px;
+    padding: 10px;
+  }
+
+  .content-container-right h1 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .content-container-right p span {
+    display: none;
+  }
+
+  .content-container-right {
+    top: -10px;
+    padding: 20px;
+  }
+
+  .content-container-right p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .content-container-right h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .content-container-left img {
+    height: 420px;
+  }
+}
